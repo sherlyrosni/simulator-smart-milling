@@ -484,7 +484,7 @@ function getLearningIllustration(index) {
     'assets/module-2.png',
     'assets/module-3.png',
     'assets/module-4.png',
-    'assets/module-5-v2.png.png'
+    'assets/module-5-v2.png'
   ];
   return figures[index] || 'assets/module-k3.png';
 }
