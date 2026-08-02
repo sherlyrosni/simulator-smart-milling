@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b5ea8" />
+  <meta name="description" content="Smart Milling Machine: media pembelajaran, simulasi troubleshooting hotspot, dan evaluasi mesin frais GUT." />
+  <title>Smart Milling Machine</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar topbar-smart">
+      <button class="brand brand-smart" type="button" data-page="home" aria-label="Kembali ke beranda">
+        <span class="brand-logos">
+          <img src="assets/logo-smart-milling.png" alt="Logo Smart Milling Machine" class="brand-logo-web" />
+          <img src="assets/logo-um.jpg" alt="Logo Universitas Negeri Malang" class="brand-logo-um" onerror="this.style.display='none'" />
+        </span>
+        <span class="brand-copy">
+          <strong>Smart Milling Machine</strong>
+          <small>Simulasi Troubleshooting Mesin Frais GUT</small>
+        </span>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navigasi utama">
+        <button class="nav-link active" type="button" data-page="home">
+          <span class="nav-ico">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 10.5 12 3l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/></svg>
+          </span>Beranda
+        </button>
+        <button class="nav-link" type="button" data-page="learning">
+          <span class="nav-ico">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 5.5h8a3 3 0 0 1 3 3V19H7a3 3 0 0 0-3 3z"/><path d="M20 5.5h-8a3 3 0 0 0-3 3V19h8a3 3 0 0 1 3 3z"/></svg>
+          </span>Pembelajaran
+        </button>
+        <button class="nav-link" type="button" data-page="simulation">
+          <span class="nav-ico">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16v10H4z"/><path d="M8 17 6 20"/><path d="M16 17l2 3"/><path d="M8.5 10.5 11 12l-2.5 1.5"/><path d="M14 13.5h2.5"/></svg>
+          </span>Simulasi
+        </button>
+        <button class="nav-link" type="button" data-page="evaluation">
+          <span class="nav-ico">
+            <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M8 8.5h8M8 12h8M8 15.5h5"/></svg>
+          </span>Evaluasi
+        </button>
+      </nav>
+    </header>
+
+    <main id="appMain" tabindex="-1">
+      <section class="page active" id="page-home" data-page-section="home">
+        <div class="hero wrap">
+          <div class="hero-copy">
+            <span class="eyebrow">MEDIA PEMBELAJARAN INTERAKTIF</span>
+            <h1>Diagnosis kerusakan <em>mesin frais GUT</em> melalui hotspot nyata</h1>
+            <p>Pelajari komponen, analisis gejala, pilih tindakan pemeriksaan yang tepat, lalu uji pemahaman melalui evaluasi otomatis.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" type="button" data-page="simulation">Mulai Simulasi</button>
+              <button class="btn btn-secondary" type="button" data-page="learning">Buka Pembelajaran</button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="machine-hero-card clean-hero-card">
+              <img src="assets/machine-front.png" alt="Ilustrasi realistis mesin frais GUT tampak depan" />
+            </div>
+          </div>
+        </div>
+
+        <div class="wrap section-space">
+          <div class="section-heading compact">
+            <span class="eyebrow">ALUR BELAJAR</span>
+            <h2>Tiga modul utama</h2>
+          </div>
+          <div class="module-grid home-modules">
+            <button class="module-card blue" type="button" data-page="learning">
+              <span class="module-icon-svg">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 5.5h8a3 3 0 0 1 3 3V19H7a3 3 0 0 0-3 3z"/><path d="M20 5.5h-8a3 3 0 0 0-3 3V19h8a3 3 0 0 1 3 3z"/></svg>
+              </span><strong>Modul Pembelajaran</strong><small>K3, spindle, panel, coolant, slideway, dan sistem pencekaman dibahas lebih detail.</small>
+            </button>
+            <button class="module-card orange" type="button" data-page="simulation">
+              <span class="module-icon-svg">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16v10H4z"/><path d="M8 17 6 20"/><path d="M16 17l2 3"/><path d="M8.5 10.5 11 12l-2.5 1.5"/><path d="M14 13.5h2.5"/></svg>
+              </span><strong>Simulasi Troubleshooting</strong><small>Pilih kasus, putar tampilan mesin dengan drag, dan tentukan tiga tindakan benar.</small>
+            </button>
+            <button class="module-card green" type="button" data-page="evaluation">
+              <span class="module-icon-svg">
+                <svg viewBox="0 0 24 24" fill="none"><rect x="5" y="3.5" width="14" height="17" rx="2"/><path d="M8 8.5h8M8 12h8M8 15.5h5"/></svg>
+              </span><strong>Latihan & Evaluasi</strong><small>Sepuluh soal pilihan ganda dengan nilai akhir otomatis.</small>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-learning" data-page-section="learning">
+        <div class="page-header wrap">
+          <div>
+            <span class="eyebrow">MODUL PEMBELAJARAN</span>
+            <h1>Kenali sistem penting mesin frais GUT</h1>
+            <p class="page-lead">Pilih topik untuk mempelajari fungsi, risiko, gejala gangguan, pemeriksaan awal, dan langkah pencegahan.</p>
+          </div>
+        </div>
+
+        <div class="learning-layout wrap">
+          <div class="learning-grid" id="learningGrid"></div>
+          <aside class="learning-detail card" id="learningDetail">
+            <span class="lesson-tag" id="learningTag">K3 BENGKEL</span>
+            <h2 id="learningTitle">Pedoman keselamatan kerja</h2>
+            <div id="learningBody"></div>
+            <div class="dual-actions">
+              <button class="btn btn-secondary" type="button" id="nextLearning">Lanjut ke modul selanjutnya</button>
+              <button class="btn btn-primary" type="button" data-page="simulation">Lanjut simulasi</button>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-simulation" data-page-section="simulation">
+        <div class="page-header wrap simulation-header">
+          <div>
+            <span class="eyebrow">PBL SIMULATION</span>
+            <h1>Diagnosis troubleshooting berbasis hotspot</h1>
+            <p class="page-lead">Pilih kasus, baca gejala pada panel kiri, lalu putar tampilan mesin dengan drag kiri/kanan untuk mencari hotspot yang relevan.</p>
+          </div>
+        </div>
+
+        <div class="simulation-shell wrap">
+          <aside class="case-panel card">
+            <div class="case-brief" id="caseBrief">
+              <span class="case-code">KASUS A</span>
+              <h3 id="caseTitle">Spindle mesin frais tidak berputar</h3>
+              <p id="caseSymptoms"></p>
+            </div>
+            <div class="case-selector-head">
+              <h2>Pilih kasus</h2>
+              <small>Ketuk salah satu kasus</small>
+            </div>
+            <div class="case-list" id="caseList"></div>
+            <div class="checklist-box">
+              <div class="checklist-title"><strong>3 Checklist Hijau</strong><span id="progressText">0/3</span></div>
+              <div class="check-slots" id="checkSlots">
+                <div class="check-slot"><span>1</span><small>Belum ditemukan</small></div>
+                <div class="check-slot"><span>2</span><small>Belum ditemukan</small></div>
+                <div class="check-slot"><span>3</span><small>Belum ditemukan</small></div>
+              </div>
+            </div>
+          </aside>
+
+          <section class="machine-viewer card">
+            <div class="viewer-toolbar viewer-toolbar-rotate viewer-toolbar-minimal">
+              <div>
+                <strong class="rotate-title">Mesin 360°</strong>
+                <span class="drag-hint">Tekan lalu geser kiri/kanan untuk memutar mesin. Sentuh titik kecil pada komponen untuk memeriksa bagian tersebut.</span>
+              </div>
+            </div>
+            <div class="machine-stage spin-stage" id="machineStage" aria-label="Mesin frais GUT interaktif 360 derajat" tabindex="0">
+              <div class="spin-loading" id="spinLoading"><span></span><small>Memuat tampilan 360°…</small></div>
+              <div class="machine-canvas" id="machineCanvas">
+                <img id="machineImage" src="assets/machine-360/frame-01.webp" alt="Mesin frais GUT sudut 0 derajat" draggable="false" />
+                <div id="hotspotLayer" class="hotspot-layer"></div>
+              </div>
+              <div class="spin-gesture" aria-hidden="true"><span>↔</span> Geser untuk memutar</div>
+            </div>
+            <div class="viewer-footer">
+              <span><b>Petunjuk:</b> putar mesin, cari komponen, lalu sentuh hotspot untuk memilih tindakan pemeriksaan. Hanya komponen yang terlihat dari sudut aktif yang diberi titik.</span>
+              <div class="viewer-footer-actions">
+                <button class="btn btn-ghost" type="button" id="showHotspotLegend">Lihat daftar komponen</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="feedback-toast" id="feedbackToast" role="status" aria-live="polite"></div>
+      </section>
+
+      <section class="page" id="page-evaluation" data-page-section="evaluation">
+        <div class="evaluation-start wrap" id="evaluationStart">
+          <div class="identity-card card">
+            <span class="eyebrow">LATIHAN & EVALUASI</span>
+            <h1>Uji pemahaman troubleshooting</h1>
+            <p>Isi identitas, lalu kerjakan sepuluh soal pilihan ganda. Tidak diperlukan login.</p>
+            <form id="evaluationForm" novalidate>
+              <label>Nama<input id="studentName" type="text" placeholder="Masukkan nama lengkap" required maxlength="80" /></label>
+              <label>NIM<input id="studentNim" type="text" inputmode="numeric" placeholder="Masukkan NIM" required maxlength="30" /></label>
+              <div class="form-error" id="identityError" role="alert"></div>
+              <button class="btn btn-primary btn-block" type="submit">Mulai 10 Soal</button>
+            </form>
+          </div>
+          <div class="brief-card">
+            <h2>Petunjuk</h2>
+            <ul>
+              <li>Pilih satu jawaban A–D pada setiap soal.</li>
+              <li>Soal mencakup spindle, gearbox, coolant, lubricator, meja, dan chatter.</li>
+              <li>Nilai akhir tampil setelah semua soal selesai.</li>
+              <li>Hasil dapat dicetak atau disimpan sebagai PDF.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="evaluation-area wrap hidden" id="evaluationArea">
+          <div class="quiz-topline">
+            <div><span class="eyebrow">SOAL EVALUASI</span><h1>Diagnosis Mesin Frais</h1></div>
+            <div class="question-pill">Soal <strong id="questionNumber">1</strong>/10</div>
+          </div>
+          <div class="quiz-layout">
+            <aside class="card quiz-progress">
+              <h2>Progres</h2>
+              <div class="progress-track"><i id="quizProgressBar"></i></div>
+              <strong id="quizProgressText">0%</strong>
+              <p>Jawaban tidak dapat diubah setelah disimpan.</p>
+            </aside>
+            <article class="card question-card">
+              <span class="question-topic" id="questionTopic"></span>
+              <h2 id="questionText"></h2>
+              <div class="option-list" id="optionList"></div>
+              <div class="answer-error" id="answerError"></div>
+              <button class="btn btn-primary" type="button" id="saveEvaluationAnswer">Simpan & Lanjut</button>
+            </article>
+          </div>
+        </div>
+
+        <div class="result-area wrap hidden" id="evaluationResult">
+          <article class="result-card card" id="resultCard">
+            <div class="result-header">
+              <div><span class="eyebrow">HASIL EVALUASI</span><h1>Smart Milling Machine</h1></div>
+              <div class="score-circle"><strong id="finalScore">0</strong><span>/100</span></div>
+            </div>
+            <div class="student-summary">
+              <div><small>Nama</small><strong id="resultName">—</strong></div>
+              <div><small>NIM</small><strong id="resultNim">—</strong></div>
+              <div><small>Tanggal</small><strong id="resultDate">—</strong></div>
+              <div><small>Benar</small><strong id="resultCorrect">0/10</strong></div>
+            </div>
+            <div class="result-message" id="resultMessage"></div>
+            <div class="table-wrap"><table><thead><tr><th>No.</th><th>Jawaban</th><th>Kunci</th><th>Status</th></tr></thead><tbody id="resultRows"></tbody></table></div>
+          </article>
+          <div class="result-actions">
+            <button class="btn btn-primary" type="button" id="printResult">Cetak / Simpan PDF</button>
+            <button class="btn btn-secondary" type="button" id="repeatEvaluation">Ulangi Evaluasi</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div class="wrap"><span>Smart Milling Machine</span><small>Media Pembelajaran S1 Pendidikan Teknik Mesin</small></div></footer>
+  </div>
+
+  <dialog class="action-dialog" id="actionDialog">
+    <button class="dialog-close" type="button" id="closeActionDialog" aria-label="Tutup">×</button>
+    <span class="lesson-tag" id="dialogHotspotId">HS_01</span>
+    <h2 id="dialogHotspotTitle">Spindle Motor Utama</h2>
+    <p id="dialogHotspotDescription"></p>
+    <div class="dialog-hotspot-media hidden" id="dialogHotspotMedia">
+      <img id="dialogHotspotImage" alt="" />
+    </div>
+    <h3>Pilih tindakan pemeriksaan</h3>
+    <div class="action-list" id="dialogActionList"></div>
+  </dialog>
+
+  <dialog class="legend-dialog" id="legendDialog">
+    <button class="dialog-close" type="button" id="closeLegendDialog" aria-label="Tutup">×</button>
+    <h2>Daftar hotspot komponen</h2>
+    <div class="legend-grid" id="legendGrid"></div>
+  </dialog>
+
+
+  <dialog class="learning-image-dialog" id="learningImageDialog" aria-labelledby="learningImageDialogTitle">
+    <div class="learning-image-dialog-header">
+      <div>
+        <span class="eyebrow">GAMBAR MODUL</span>
+        <h2 id="learningImageDialogTitle">Gambar modul</h2>
+      </div>
+      <button class="dialog-close learning-dialog-close" type="button" id="closeLearningImageDialog" aria-label="Tutup gambar">×</button>
+    </div>
+    <div class="learning-image-toolbar" aria-label="Kontrol perbesaran gambar">
+      <button type="button" id="learningImageZoomOut" aria-label="Perkecil gambar">−</button>
+      <strong id="learningImageZoomLabel">100%</strong>
+      <button type="button" id="learningImageZoomIn" aria-label="Perbesar gambar">+</button>
+      <button class="zoom-reset" type="button" id="learningImageZoomReset">Ukuran awal</button>
+    </div>
+    <div class="learning-image-viewport" id="learningImageViewport">
+      <img id="learningImageDialogImage" alt="" draggable="false" />
+    </div>
+    <p class="learning-image-help">Gunakan tombol +/− untuk memperbesar. Gambar dapat digeser setelah diperbesar.</p>
+  </dialog>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
